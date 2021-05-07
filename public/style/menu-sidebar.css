@@ -1,0 +1,128 @@
+/* MENU HAMBURGUER */
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  right: 0.5%;
+  top: 45px;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.line {
+  background-color: aliceblue;
+  width: 100%;
+  border-radius: 3px;
+  height: 3px;
+  box-shadow: 2px 2px 2px #000000;
+}
+
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: -30%;
+  z-index: 5;
+  border-left: 1px solid cornsilk;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.sidebar.show-menu {
+  right: 0;
+  transition: 0.5s;
+}
+
+.nav-sidebar {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-sidebar-menu-txt {
+  flex-basis: 100%;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  justify-self: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  flex-basis: 100%;
+  justify-self: center;
+  list-style: none;
+}
+
+.menu a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.menu-item {
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.menu-item:hover {
+  background-color: rgba(36, 36, 36, 0.863);
+  border-radius: 8px;
+}
+
+.item-link {
+  font-size: larger;
+}
+
+/* RESPONSIVIDADE DO MENU HAMBURGUER */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 40%;
+    right: -40%;
+  }
+}
+
+@media (max-width: 770px) {
+  .menu-icon {
+    top: 40px;
+  }
+
+  .sidebar {
+    width: 40%;
+    right: -40%;
+  }
+}
+
+@media (max-width: 516px) {
+  /*SMARTPHONE*/
+
+  .menu-icon {
+    width: 40px;
+    height: 35px;
+    right: 5px;
+    top: 2px;
+  }
+
+  .menu-icon .line {
+    width: 90%;
+    height: 2px;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+}

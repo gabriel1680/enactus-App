@@ -1,0 +1,329 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+.img-background {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  background: url("../img/pexels-taryn-elliott-5405596.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: ivory;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-left: 30px;
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginbox {
+  position: absolute;
+  width: 35%;
+  height: 400px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 5, 0.85);
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  color: whitesmoke;
+  animation: fade 800ms;
+}
+
+form {
+  width: 100%;
+  position: relative;
+}
+
+input,
+button {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  animation: move 0.8s;
+  animation-fill-mode: backwards;
+}
+
+input#iUsername {
+  animation-delay: 400ms;
+}
+
+input#iPassword {
+  animation-delay: 600ms;
+}
+
+input#iUsername,
+input#iPassword {
+  /*border: none;*/
+  border: 1.3px solid transparent;
+  border-bottom: 1.3px solid whitesmoke;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  color: white;
+  transition: 0.2s;
+}
+
+input#iUsername:focus,
+input#iPassword:focus {
+  border: 1.3px solid #ffe100;
+  border-radius: 5px;
+}
+
+input#iUsername:hover,
+input#iPassword:hover {
+  border-bottom: 1.3px solid rgb(255, 238, 0);
+  transition: 0.2s;
+}
+
+#sAcessar {
+  border-radius: 30px;
+  background-color: #ffe732;
+  border-style: none;
+  cursor: pointer;
+  height: 50px;
+  margin-top: 0px;
+  font-size: 1.5rem;
+  animation-delay: 800ms;
+  transition: 0.2s;
+}
+
+#sAcessar:hover {
+  background-color: #ffec61;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.loginbox p {
+  margin-bottom: 10px;
+  margin-left: 6%;
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+
+.forgot-link {
+  color: #3498db;
+}
+
+.forgot {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  margin: 8px;
+}
+
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  background: #ffe732;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.footer-container a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fade {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translatex(-40%);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0%);
+  }
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1441px) and (max-width: 2560px) /*4K*/ {
+  html {
+    font-size: 150%;
+  }
+
+  .loginbox {
+    padding-top: 50px;
+    width: 40%;
+    height: 800px;
+    border-radius: 50px;
+  }
+
+  form {
+    height: 80%;
+  }
+
+  input {
+    margin-top: 80px;
+  }
+
+  input#sAcessar {
+    margin-top: 50px;
+    height: 80px;
+    border-radius: 50px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) /*FULL HD*/ {
+  .loginbox {
+    width: 40%;
+    height: 425px;
+  }
+
+  button#sAcessar {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 523px) and (max-width: 768px) /*TABLET*/ {
+  .loginbox {
+    border-radius: 25px;
+    height: 350px;
+    width: 60%;
+  }
+
+  h2 {
+    margin: 15px;
+  }
+
+  form {
+    height: 80%;
+  }
+
+  input {
+    margin-top: 5px;
+  }
+
+  button#sAcessar {
+    margin-top: 10px;
+    height: 33px;
+  }
+}
+
+@media (max-width: 522px) /*SMARTPHONE*/ {
+  .img-background {
+    background-image: none;
+    background: #ffec61;
+  }
+
+  .container {
+    align-items: flex-start;
+  }
+
+  .loginbox {
+    color: black;
+    background-color: white;
+    margin: 125px 0;
+    width: 85%;
+    height: 390px;
+    box-shadow: 8px 8px 3px black;
+    -moz-box-shadow: 8px 8px 3px black;
+    -webkit-box-shadow: 8px 8px 3px black;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+  }
+
+  .loginbox p {
+    font-size: 1em;
+  }
+
+  .loginbox input#iUsername,
+  input#iPassword {
+    padding: 10px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1.5px solid rgb(146, 146, 146);
+  }
+
+  .loginbox input#iUsername::placeholder,
+  input#iPassword::placeholder {
+    font-size: 0.9em;
+  }
+
+  input#iUsername:focus,
+  input#iPassword:focus {
+    border: 1.5px solid #ffec61;
+    background: rgb(206, 206, 206);
+    color: black;
+    transition: 0.2s;
+  }
+
+  .login-header {
+    text-align: center;
+  }
+
+  .login-header h2 {
+    font-weight: bolder;
+    margin: 20px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  button#sAcessar {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #ffec61;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+    height: 45px;
+    transition: 0.2s;
+    border: 1px solid black;
+  }
+
+  button#sAcessar:hover {
+    background-color: #ffec61;
+    color: black;
+  }
+
+  .feedback {
+    font-size: 0.8em;
+  }
+  .footer-container {
+    padding: 5px;
+  }
+}

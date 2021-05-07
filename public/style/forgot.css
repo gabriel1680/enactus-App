@@ -1,0 +1,170 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-image: url("../img/pexels-taryn-elliott-5405596.jpg");
+  background-repeat: no-repeat;
+  color: aliceblue;
+}
+
+.support-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.support-content {
+  max-height: 500px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: flex-start;
+  height: fit-content;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.726);
+  align-items: center;
+  border-radius: 30px;
+}
+
+.support-title {
+  flex-basis: 50%;
+  padding-right: 10px;
+}
+
+.support-form-container {
+  flex-basis: 50%;
+}
+
+.support-header {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.support-form-container label {
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  width: 100%;
+  margin: 20px auto;
+  padding: 2px 15px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+input {
+  padding: 10px 15px;
+}
+
+button {
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #ffe942;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  font-weight: bolder;
+  background-color: #ffe942;
+}
+
+input[type="datetime-local"] {
+  padding-left: 5%;
+}
+
+input[type="radio"] {
+  width: 5%;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+label {
+  color: aliceblue;
+  font-size: 1.25rem;
+}
+
+.rotulo {
+  color: aliceblue;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 710px) {
+  .support-content {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .support-body {
+    margin: 20px auto;
+  }
+
+  .support-form-container button {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    background-image: none;
+    background-color: #ffec61;
+  }
+  .support-content {
+    max-height: 450px;
+    overflow-y: auto;
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+    height: fit-content;
+    color: black;
+    box-shadow: 8px 8px 3px black;
+    -moz-box-shadow: 8px 8px 3px black;
+    -webkit-box-shadow: 8px 8px 3px black;
+  }
+
+  .support-content label,
+  p {
+    color: black !important;
+    font-size: 1.2em;
+  }
+
+  .support-content h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  .support-content p {
+    font-size: 1em;
+  }
+
+  .support-content input[type="email"],
+  input[type="password"],
+  select {
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid gray;
+  }
+
+  button {
+    border: 1px solid black;
+    background-color: #ffec61;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px;
+  }
+}

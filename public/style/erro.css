@@ -1,0 +1,12 @@
+.error-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffec61;
+  width: 90%;
+  max-width: 1300px;
+  z-index: 2;
+  padding: 50px;
+  border-radius: 20px;
+}
